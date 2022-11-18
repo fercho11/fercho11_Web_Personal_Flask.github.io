@@ -17,7 +17,6 @@
     <link href="{{ url_for('static', filename='css/clean-blog.min.css') }}" rel="stylesheet">
 
   </head>
-
   <body>
 
     <!-- Navegación -->
@@ -47,8 +46,27 @@
       </div>
     </nav>
 
+    <!-- Cabecera -->
+    <header class="masthead"
+     style="background-image: url('{% block header_img %}{% endblock %}')"
+     >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{% block header_title %}{% endblock %}</h1>
+              <span class="subheading">{% block header_sub %}{% endblock %}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     {% block content %}
     {% endblock %}
+
+    <hr>
         <!-- Pié de página -->
         <footer>
             <div class="container">
@@ -80,7 +98,8 @@
                       </a>
                     </li>
                   </ul>
-                  <p class="copyright text-muted">Copyright &copy; 2018 · Fernando Castañeda (Técnico en Redes) </p>
+                  <p class="copyright text-muted">Copyright &copy; 2022 · Fernando Castañeda
+                  (TIAIRD) </p>
                 </div>
               </div>
             </div>

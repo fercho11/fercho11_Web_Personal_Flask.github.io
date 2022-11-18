@@ -2,21 +2,11 @@
 
 {% block title %}Portfolio{% endblock %}
 
+{% block header_img %}{{ url_for('static', filename='img/portfolio-bg.jpg') }}{% endblock %}
+{% block header_title %}Portafolio{% endblock %}
+{% block header_sub %}Currículo{% endblock %}
+
 {% block content %}
-	    <!-- Cabecera -->
-	    <header class="masthead" style="background-image: url('img/portfolio-bg.jpg')">
-	      <div class="overlay"></div>
-	      <div class="container">
-	        <div class="row">
-	          <div class="col-lg-8 col-md-10 mx-auto">
-	            <div class="site-heading">
-	              <h1>Portafolio</h1>
-	              <span class="subheading">Currículo</span>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </header>
 
 	    <!-- Contenido Principal -->
 	    <div class="container">

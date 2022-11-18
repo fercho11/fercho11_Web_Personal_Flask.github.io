@@ -2,22 +2,11 @@
 
 {% block title %}Acerca de{% endblock %}
 
-{% block content %}
-    <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Acerca de</h1>
-              <span class="subheading">Biografía</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+{% block header_img %}{{ url_for('static', filename='img/about-bg.jpg') }}{% endblock %}
+{% block header_title %}Acerca de{% endblock %}
+{% block header_sub %}Biografía{% endblock %}
 
+{% block content %}
     <!-- Contenido Principal -->
     <div class="container">
       <div class="row">   
@@ -32,6 +21,4 @@
       </div>  
     </div>
 
-    <hr>
 {% endblock %}
-
