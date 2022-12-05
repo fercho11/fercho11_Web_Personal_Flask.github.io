@@ -39,7 +39,7 @@
             {{ form.gender(class="custom-select") }}
         </div>
         {{ form.submit(class="btn btn-primary") }}
-        <a type="submit" class="btn btn-danger" href="{{ url_for('login') }}" >Login</a>
+        <a type="submit" class="btn btn-danger" href="{{ url_for('auth.login') }}" >Login</a>
     </form>
 </div>
 {% endblock %}
