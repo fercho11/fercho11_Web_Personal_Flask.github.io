@@ -8,29 +8,38 @@
 {% block content %}
 <div class="container">
     <h2>Formulario de Registro</h2>
-    <form action="">
+    <form method="post">
+        {{ form.hidden_tag() }}
         <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name">
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
         </div>
         <div class="form-group">
-            <label for="last_name">Apellidos</label>
-            <input type="text" class="form-control" id="last_name" name="last_name">
+            {{ form.last_name.label }}
+            {{ form.last_name(class="form-control") }}
         </div>
         <div class="form-group">
-            <label for="mail">Correo</label>
-            <input type="email" class="form-control" id="email" name="email">
+            {{ form.email.label }}
+            {{ form.email(class="form-control") }}
         </div>
         <div class="form-group">
-            <label for="pass">Password</label>
-            <input type="password" class="form-control" id="pass" name="pass">
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
         </div>
         <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="number" class="form-control" id="phone" name="phone">
+            {{ form.phone.label }}
+            {{ form.phone(class="form-control") }}
         </div>
-        <button type="submit" class="btn btn-success">Registrarse</button>
-        <a href="{{ url_for('login') }}" type="submit" class="btn btn-danger">Login</a>
+        <hr>
+        {{ form.is_married.label(class='btn') }}
+        {{ form.is_married }}
+        <hr>
+        {{ form.gender.label }}
+        <div class="input-group mb-3">
+            {{ form.gender(class="custom-select") }}
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+        <a type="submit" class="btn btn-danger" href="{{ url_for('login') }}" >Login</a>
     </form>
 </div>
 {% endblock %}
